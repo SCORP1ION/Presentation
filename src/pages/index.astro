@@ -1,16 +1,84 @@
 ---
-
+import "../styles/estilos.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>RIGR</title>
+  </head>
+  <body>
+    <img src="src/pages/img/me.jpeg" alt="photoMe" class="me" />
+    <h2 class="nombre">Ricardo Garcia</h2>
+    <p class="presentacion">
+      Que tal, soy egresado del Tecnologico Superior de Jalisco y tengo
+      demasiada hambre de conocimiento y sed de aprender nuevas tecnologias, me
+      encanta el desarollo web, movil y estoy en un curso para un certificado en
+      cisco de ciberseguridad ya que es mi pasion
+    </p>
+    <p class="Ubicacion">Puerto Vallarta, Jalisco</p>
+    <a class="button" href="graciaricardo325@gmail.com">Contactame</a>
+    <section class="tecno">
+      <div>
+        <h3>SKILLS</h3>
+      </div>
+      	<div class="lenguajes">
+        	<a>JavaScript</a>
+        	<a>C++</a>
+        	<a>Astro</a>
+        	<a>HTML5</a>
+        	<a>Flutter</a>
+        	<a>React Native</a>
+      	</div>
+    </section>
+    <header>
+        <text class="projects">Proyectos</text>
+      </header>
+    <section class="proyectos">
+      <div class="LM">
+        <img
+		      class="IMGLM"
+          src="/src/pages/img/LMservice.jpeg"
+          style="padding-top: 1rem;"
+        />
+        <p class="titulo">Laptop master service</p>
+        <p class="descriptionProjecto">
+          Aplicacion movil de asginaciona de servicios sobre problemas de
+          equipos para empresas o negocios, apartado de venta de equipos de
+          computo y ubicacion de local con google maps
+        </p>
+        <text>React native</text>
+        <text>Firebase</text>
+        <text>JavaScript</text>
+        <div class="codigo">
+          <a href="https://github.com/SCORP1ION/Laptop-Master-Service.git" class="verCodigo">View code</a>
+        </div>
+      </div>
+      <div class="LM">
+        <img
+		      class="IMGLM"
+          src="/src/pages/img/LMservice.jpeg"
+          style="padding-top: 1rem;"
+        />
+        <p class="titulo">Laptop master service</p>
+        <p class="descriptionProjecto">
+          Aplicacion movil de asginaciona de servicios sobre problemas de
+          equipos para empresas o negocios, apartado de venta de equipos de
+          computo y ubicacion de local con google maps
+        </p>
+        <text>React native</text>
+        <text>Firebase</text>
+        <text>JavaScript</text>
+        <div class="codigo">
+          <a href="https://github.com/SCORP1ION/Laptop-Master-Service.git" class="verCodigo">View code</a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer>
+    &copy; 2026 RIGR. Todos los derechos reservados.
+  </footer>
 </html>
