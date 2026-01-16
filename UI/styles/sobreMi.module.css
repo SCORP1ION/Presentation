@@ -1,0 +1,28 @@
+.nombre {
+  color: var(--neutral-light);
+  font-weight: 800;
+  text-align: center;
+  padding: 1rem;
+}
+.presentacion {
+  color: var(--color-text);
+  text-align: center;
+  justify-content: space-around;
+}
+.Ubicacion {
+  color: var(--color-text);
+  text-align: center;
+  justify-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.me {
+  border-radius: 50%;
+  width: auto;
+  height: 300px;
+  margin-bottom: 2rem;
+  padding: inherit;
+  display: block;
+  margin: auto;
+  padding-top: 15px;
+}
