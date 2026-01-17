@@ -1,3 +1,9 @@
+.hero{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .nombre {
   color: var(--neutral-light);
   font-weight: 800;

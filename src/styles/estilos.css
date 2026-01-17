@@ -24,36 +24,6 @@ body {
   }
 }
 
-
-.button {
-  background-color: var(--primary-accent);
-  font-weight: 800;
-  color: var(--neutral-light);
-  display: block;
-  height: 2rem;
-  justify-self: center;
-  border-radius: 4px;
-  width: 100px;
-  text-align: center;
-  padding-top: 10px;
-  margin-bottom: 3rem;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: rgba(36, 120, 106, 0.1);
-  transition: 0.5s;
-  text-align: center;
-}
-
-.projects {
-  color: var(--neutral-light);
-  font-family: "Times New Roman", Times, serif, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  display: block;
-}
-
 footer{
   color: var(--neutral-light);
 }

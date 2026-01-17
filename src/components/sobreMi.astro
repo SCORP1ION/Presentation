@@ -1,8 +1,10 @@
 ---
 import style from "../../UI/styles/sobreMi.module.css"
+import BottomContact from "./BottomContact.astro"
 ---
 
-<img src="/img/me.jpeg" alt="photoMe" class={style.me}/>
+<section class={style.hero}>
+  <img src="/img/me.jpeg" alt="photoMe" class={style.me}/>
     <h2 class={style.nombre}>Ricardo Garcia</h2>
     <p class={style.presentacion}>
       Que tal, soy egresado del Tecnologico Superior de Jalisco y tengo
@@ -11,3 +13,6 @@ import style from "../../UI/styles/sobreMi.module.css"
       cisco de ciberseguridad ya que es mi pasion
     </p> 
     <p class={style.Ubicacion}>Puerto Vallarta, Jalisco</p>
+
+    <BottomContact/>
+</section>

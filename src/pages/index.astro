@@ -1,23 +1,12 @@
 ---
-import "../styles/estilos.css";
+import Inicial from "../principal/inicial.astro";
 import Projects from "../components/projects.astro";
-import SobreMi from  "../components/sobreMi.astro";
+import SobreMi from "../components/sobreMi.astro";
 import Tecnologies from "../components/tecnologies.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>RIGR</title>
-  </head>
-  <body>
-    <SobreMi/>
-    <a class="button" href="graciaricardo325@gmail.com">Contactame</a>
-  </body>
-  <Tecnologies/>
-  <Projects/>
-  <footer>&copy; 2026 RIGR. Todos los derechos reservados.</footer>
-</html>
+<Inicial>
+  <SobreMi />
+  <Tecnologies />
+  <Projects />
+</Inicial>
