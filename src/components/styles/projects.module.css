@@ -1,11 +1,10 @@
-.proyectos {
+.projectGrid {
   padding-left: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  gap: 2rem;
 }
+
 img {
   border-radius: 5px; 
   width: 300px;
@@ -58,7 +57,7 @@ text:hover {
   color: var(--neutral-light);
 }
 
-.LM {
+.articleProyect {
   width: 450px;
   border-radius: 10px;
   box-shadow:
