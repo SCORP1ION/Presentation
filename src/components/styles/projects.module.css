@@ -68,3 +68,12 @@ text:hover {
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
   height: auto;
 }
+
+@media(max-width: 499px){
+  .projectGrid{
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+

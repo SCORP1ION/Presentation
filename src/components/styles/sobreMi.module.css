@@ -33,3 +33,13 @@
   margin: auto;
   padding-top: 15px;
 }
+
+@media(max-width: 499px){
+  .hero{
+    justify-items: center;
+  }
+  .presentacion{
+    max-width: 40ch;
+  }
+}
+
