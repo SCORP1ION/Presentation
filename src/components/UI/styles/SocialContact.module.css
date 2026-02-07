@@ -5,4 +5,6 @@
     justify-content: center;
 }
 
-
+.container a{
+    padding-left: 1rem;
+}
