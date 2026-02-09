@@ -1,16 +1,25 @@
 ---
-import style from "../components/styles/tecnologies.module.css"
+import style from "../components/styles/tecnologies.module.css";
+
+const skill = [
+  "JavaScript",
+  "C++",
+  "Astro",
+  "HTML5",
+  "Flutter",
+  "React Navite",
+  "React",
+  "CSS",
+];
 ---
-  <div>
-    <h3>SKILLS</h3>
-  </div>
-  <div class={style.lenguajes}>
-    <a>JavaScript</a>
-    <a>C++</a>
-    <a>Astro</a> 
-    <a>HTML5</a>
-    <a>Flutter</a>
-    <a>React Native</a>
-    <a>React</a>
-    <a>CSS</a>
-  </div>
+
+<div>
+  <h3>SKILLS</h3>
+</div>
+<div class={style.lenguajes}>
+  {
+    skill.map((skills) => (
+      <a>{skills}</a>
+    ))
+  }
+</div>
