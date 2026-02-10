@@ -1,16 +1,17 @@
 .projectGrid {
-  padding-left: 10px;
+  padding: 0 1rem;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-img {
+.articleProyect img {
   border-radius: 5px; 
   width: 300px;
   height: 200px;
   display: block;
-  padding: inherit;
+  padding: 0;
   margin: auto;
 }
 
@@ -26,18 +27,24 @@ img {
   margin: 1rem;
 }
 
-span {
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.tech span {
   border: 1px solid var(--primary-accent);
   border-radius: 50px;
   background-color: var(--primary-accent);
   font-weight: 900;
   color: rgb(218, 218, 218);
-  margin: 5px;
-  padding: 5px;
+  padding: 5px 10px;
 }
-text:hover {
-  cursor: pointer;
-}
+
 .codigo {
   padding: 1rem;
   justify-items: center;
