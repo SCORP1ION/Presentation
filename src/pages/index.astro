@@ -1,12 +1,15 @@
 ---
-import Inicial from "../principal/Inicial.astro";
+import Inicial from "../layout/layout.astro";
 import CardsProjects from "../components/cards/cardsProjects.astro";
-import SobreMi from "../components/sobreMi.astro";
-import Tecnologies from "../components/tecnologies.astro";
+import SobreMi from "../hero/sobreMi.astro";
+import Tecnologies from "../components/UI/tecnologies.astro";
 import SocialContact from "../components/UI/SocialContact.astro";
+import Header from "../components/UI/header.astro";
+import '../styles/global.css'
 ---
 
 <Inicial>
+  <Header/>
   <SobreMi />
   <Tecnologies />
   <CardsProjects />

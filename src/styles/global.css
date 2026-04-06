@@ -1,11 +1,10 @@
 :root {
-  --neutro-dark: #101922;
+  --neutro-dark: #000000;
   --primary-accent: #137fec;
   --neutral-light: #f6f7f8;
   --typography-main: #111827;
   --color-text: #a9acb3;
   --typography-muted: #6B7280;
-
 }
 
 * {
