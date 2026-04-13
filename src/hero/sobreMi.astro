@@ -1,18 +1,19 @@
 ---
-import style from "../styles/components/sobreMi.module.css"
-import BottomContact from "../components/UI/BottomContact.astro"
---- 
+import style from "../styles/components/sobreMi.module.css";
+import BottomContact from "../components/UI/BottomContact.astro";
+---
 
 <section class={style.hero}>
-  <img src="/img/me.jpeg" alt="photoMe" class={style.me}/>
-    <h2 class={style.nombre}>Ricardo Garcia</h2>
-    <p class={style.presentacion}>
-      Que tal mi nombre es Ricardo Ivan Garcia Ramos y soy un egresado del Tecnologico Superior de Jalisco y tengo
-      demasiada hambre de conocimiento y sed de aprender nuevas tecnologias, me
-      encanta el desarollo web, movil y estoy en un curso para un certificado en
-      cisco de ciberseguridad ya que es mi pasion
-    </p> 
-    <p class={style.Ubicacion}>Puerto Vallarta, Jalisco</p>
+  <div class={style.left}>
+    <h2 class={style.textBig}>
+      I build <strong>impactful</strong> digital solutions.
+    </h2>
 
-    <BottomContact/>
+    <p class={style.presentacion}>
+      Full-stack Software Enginner dedicated to crafting high-permformance, secure, and visually stuning web applications that solve real-world problems.
+    </p>
+  </div>
+
+  <div class={style.rigth}><img src="/img/me.jpeg" alt="photoMe" class={style.mePhoto} /></div>
+  
 </section>

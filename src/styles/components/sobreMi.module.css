@@ -1,56 +1,51 @@
 .hero{
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 100vw;
-  padding: 0 1rem;
-  margin: 0;
-  box-sizing: border-box;
+  justify-content: space-between;
+  min-width: 100vh;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.nombre {
-  color: var(--neutral-light);
-  font-weight: 800;
-  text-align: center;
-  padding: 1rem;
+.left{
+  flex: 1;
 }
+
+.rigth {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mePhoto{
+  border-radius: 30px;
+  height: 500px;
+  box-shadow: 0 0 80px 1px rgba(255, 255, 255, 0.5);
+}
+
+.textBig{
+  color: white;
+  font-size: 6rem;
+}
+
 .presentacion {
   color: var(--color-text);
   text-align: center;
   max-width: 90ch;
-  margin: 0 auto;
-  width: 100%;
   box-sizing: border-box;
   padding: 0;
 }
-.Ubicacion {
-  color: var(--color-text);
-  text-align: center;
-  justify-items: flex-start;
-  margin-bottom: 1rem;
-}
 
-.me {
-  border-radius: 50%;
-  width: auto;
-  height: 300px;
-  margin: 0 auto 2rem auto;
-  padding: 0;
-  display: block;
-  padding-top: 15px;
-}
 
-@media(max-width: 499px){
+
+@media(max-width: 768px){
   .hero{
     flex-direction: column;
-    padding: 0 1rem;
     align-items: center;
-    width: 100%;
-    max-width: 100vw;
-    margin: 0;
+  }
+
+  .rigth{
+    order: -1;
   }
   .presentacion{
     max-width: 100%;
@@ -59,18 +54,8 @@
     margin: 0 auto;
     text-align: center;
   }
-  .nombre {
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .Ubicacion {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto 1rem auto;
-  }
-  .me {
+
+  .mePhoto {
     margin: 0 auto 2rem auto;
     display: block;
   }

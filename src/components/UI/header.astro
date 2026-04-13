@@ -1,14 +1,89 @@
 ---
-import styles from '../../styles/UI/header.module.css'
+import styles from "../../styles/UI/header.module.css";
+import BottomCV from "./BottomCV.astro";
 ---
 
 <header class={styles.encabezado}>
-    <h1>RIGR</h1>
-    <nav class={styles.navigation}>
-        <span>ABOUT</span>
-        <span>PROJECTS</span>
-        <span>SKILL</span>
-        <span>EXPERIENCE</span>
-        <span>CONTACT</span>
-    </nav>
+    <div class={styles.left}>
+        <h1>RIGR</h1>
+    </div>
+
+    <div class={styles.navigationContainer}>
+        <nav class={styles.navigation}>
+            <span>ABOUT</span>
+            <span>PROJECTS</span>
+            <span>SKILL</span>
+            <span>EXPERIENCE</span>
+            <span>CONTACT</span>
+        </nav>
+    </div>
+
+    <div class={styles.right}>
+        <BottomCV text="Download CV" />
+        <button
+            class={styles.burger}
+            data-burger
+            aria-label="Open menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class={styles.backdrop} data-backdrop></div>
+
+    <aside class={styles.mobileMenu} data-menu>
+        <div class={styles.mobileHeader}>
+            <p class={styles.mobileTitle}>Menu</p>
+            <button class={styles.close} data-close>X</button>
+        </div>
+
+        <div class={styles.mobileNav}>
+            <span data-link>ABOUT</span>
+            <span data-link>PROJECTS</span>
+            <span data-link>SKILL</span>
+            <span data-link>EXPERIENCE</span>
+            <span data-link>CONTACT</span>
+        </div>
+
+        <!-- ✅ botón dentro del menú -->
+        <BottomCV text="Download CV" />
+    </aside>
 </header>
+
+<script is:inline>
+    const burger = document.querySelector("[data-burger]");
+    const menu = document.querySelector("[data-menu]");
+    const backdrop = document.querySelector("[data-backdrop]");
+    const closeBtn = document.querySelector("[data-close]");
+    const links = document.querySelectorAll("[data-link]");
+
+    const openMenu = () => {
+        document.body.dataset.menuOpen = "true";
+        burger?.setAttribute("aria-expanded", "true");
+        menu?.setAttribute("aria-hidden", "false");
+    };
+
+    const closeMenu = () => {
+        document.body.dataset.menuOpen = "false"; // ✅ corregido
+        burger?.setAttribute("aria-expanded", "false");
+        menu?.setAttribute("aria-hidden", "true");
+    };
+
+    burger?.addEventListener("click", () => {
+        const isOpen = document.body.dataset.menuOpen === "true";
+        isOpen ? closeMenu() : openMenu();
+    });
+
+    closeBtn?.addEventListener("click", closeMenu);
+    backdrop?.addEventListener("click", closeMenu);
+
+    links.forEach((a) => a.addEventListener("click", closeMenu)); // ✅ corregido
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+    });
+
+    document.body.dataset.menuOpen = "false";
+</script>
