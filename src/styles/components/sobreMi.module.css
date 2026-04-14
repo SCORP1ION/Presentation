@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100vh;
+  min-height: 10vh;
   gap: 2rem;
   padding: 2rem;
 }
@@ -11,10 +11,9 @@
   flex: 1;
 }
 
-.rigth {
-  flex: 1;
+.right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .mePhoto{
@@ -26,16 +25,18 @@
 .textBig{
   color: white;
   font-size: 6rem;
+  max-width: 20ch;
 }
 
 .presentacion {
   color: var(--color-text);
+  font-size: 20px;
   text-align: center;
-  max-width: 90ch;
+  max-width: 70ch;
   box-sizing: border-box;
   padding: 0;
+  padding: 3rem;
 }
-
 
 
 @media(max-width: 768px){
@@ -44,7 +45,7 @@
     align-items: center;
   }
 
-  .rigth{
+  .right{
     order: -1;
   }
   .presentacion{

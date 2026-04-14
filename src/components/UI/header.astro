@@ -1,6 +1,6 @@
 ---
 import styles from "../../styles/UI/header.module.css";
-import BottomCV from "./BottomCV.astro";
+import BottomText from "./BottomText.astro";
 ---
 
 <header class={styles.encabezado}>
@@ -19,7 +19,7 @@ import BottomCV from "./BottomCV.astro";
     </div>
 
     <div class={styles.right}>
-        <div class={styles.cvWrapper}><BottomCV text="Download CV"/></div>
+        <div class={styles.cvWrapper}><BottomText text="Download CV"/></div>
         
         <button
             class={styles.burger}
@@ -46,7 +46,7 @@ import BottomCV from "./BottomCV.astro";
             <span data-link>EXPERIENCE</span>
             <span data-link>CONTACT</span>
         </div>
-        <BottomCV text="Download CV" />
+        <BottomText text="Download CV" />
     </aside>
 </header>
 
