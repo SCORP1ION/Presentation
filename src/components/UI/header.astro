@@ -19,35 +19,33 @@ import BottomCV from "./BottomCV.astro";
     </div>
 
     <div class={styles.right}>
-        <BottomCV text="Download CV" />
+        <div class={styles.cvWrapper}><BottomCV text="Download CV"/></div>
+        
         <button
             class={styles.burger}
-            data-burger
             aria-label="Open menu"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            data-burger
+        >☰
         </button>
     </div>
 
     <div class={styles.backdrop} data-backdrop></div>
 
-    <aside class={styles.mobileMenu} data-menu>
+    <aside class={styles.mobileMenu} data-menu id="mobile-menu" aria-hidden="true">
         <div class={styles.mobileHeader}>
             <p class={styles.mobileTitle}>Menu</p>
-            <button class={styles.close} data-close>X</button>
+            <button class={styles.close} type="button" aria-label="Cerrar menu" data-close>X</button>
         </div>
 
-        <div class={styles.mobileNav}>
+        <div class={styles.mobileNav} aria-label="Navegacion movil">
             <span data-link>ABOUT</span>
             <span data-link>PROJECTS</span>
             <span data-link>SKILL</span>
             <span data-link>EXPERIENCE</span>
             <span data-link>CONTACT</span>
         </div>
-
-        <!-- ✅ botón dentro del menú -->
         <BottomCV text="Download CV" />
     </aside>
 </header>
@@ -66,9 +64,9 @@ import BottomCV from "./BottomCV.astro";
     };
 
     const closeMenu = () => {
-        document.body.dataset.menuOpen = "false"; // ✅ corregido
-        burger?.setAttribute("aria-expanded", "false");
-        menu?.setAttribute("aria-hidden", "true");
+        document.body.dataset.menuOpen = "false";
+        burger?.setAttribute("aria-expanded", "false")
+        menu?.setAttribute("aria-hidden", "true")
     };
 
     burger?.addEventListener("click", () => {
@@ -79,11 +77,7 @@ import BottomCV from "./BottomCV.astro";
     closeBtn?.addEventListener("click", closeMenu);
     backdrop?.addEventListener("click", closeMenu);
 
-    links.forEach((a) => a.addEventListener("click", closeMenu)); // ✅ corregido
-
-    window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeMenu();
-    });
+    links.forEach((link) => link.addEventListener("click", closeMenu)); 
 
     document.body.dataset.menuOpen = "false";
 </script>

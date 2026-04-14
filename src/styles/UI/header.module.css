@@ -1,111 +1,97 @@
-.encabezado{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
+/* ===== HEADER ===== */
+.encabezado {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
 }
 
-.left{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem
+/* ===== LEFT ===== */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.right{
-    display: flex;
-    justify-content: flex-end;
-} 
-
-.encabezado h1{
-    color: #6D88FF;
-    cursor: pointer;
+.encabezado h1 {
+  color: #6D88FF;
+  cursor: pointer;
 }
 
-.navigationContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    flex: 1;
+/* ===== NAV ===== */
+.navigationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
-.navigation{
-    display: flex;
-    gap: 2.5rem;
+.navigation {
+  display: flex;
+  gap: 2.5rem;
 }
 
-.navigation span{
-    color: white;
-    gap: 2.5rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.navigation span {
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-span:hover{
-    color: var(--primary-accent);
-    transform: translateY(-5px);
+/* 👇 IMPORTANTE: evitar afectar TODOS los span */
+.navigation span:hover {
+  color: var(--primary-accent);
+  transform: translateY(-5px);
 }
 
-.menuBtn{
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    cursor: pointer;
+/* ===== RIGHT ===== */
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
 }
 
-@media (max-width: 900px){
-  .navigation{ display: none; }
-
-  .right :global(button){
-    display: none;
-  }
-
-  .burger{
-    display: inline-flex;
-  }
-}
-
-
-.mobileMenu :global(button){
-  margin-top: auto;
-  width: 100%;
-}
-
-.burger{
-  display: none; /* se activa en mobile */
+.burger {
+  display: none;
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(17,24,39,0.12);
+  border: 1px solid rgba(17, 24, 39, 0.12);
   background: white;
   border-radius: 12px;
+  cursor: pointer;
+
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding: 0;
 }
 
-.burger span{
-  display: block;
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+}
+
+.burger span {
   width: 18px;
   height: 2px;
   background: #111;
   border-radius: 2px;
   transition: transform .2s ease, opacity .2s ease;
-  cursor: pointer;
 }
 
-.backdrop{
+.backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   opacity: 0;
   pointer-events: none;
   transition: opacity .2s ease;
   z-index: 60;
 }
 
-.mobileMenu{
+/* ===== MOBILE MENU ===== */
+.mobileMenu {
   position: fixed;
   top: 0;
   right: 0;
@@ -119,71 +105,112 @@ span:hover{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-left: 1px solid rgba(17,24,39,0.10);
+
+  border-left: 1px solid rgba(17, 24, 39, 0.10);
 }
 
-.mobileHeader{
+/* HEADER MENU */
+.mobileHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.mobileTitle{
+.mobileTitle {
   margin: 0;
   font-weight: 900;
   font-size: 1.1rem;
 }
 
-.close{
+/* CLOSE BUTTON */
+.close {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  border: 1px solid rgba(17,24,39,0.12);
+  border: 1px solid rgba(17, 24, 39, 0.12);
   background: white;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.mobileNav{
+/* NAV MOBILE */
+.mobileNav {
   display: flex;
   flex-direction: column;
   gap: .75rem;
 }
 
-.mobileNav span{
-  text-decoration: none;
+.mobileNav span {
   color: #111;
   font-weight: 700;
-  padding: .75rem .75rem;
+  padding: .75rem;
   border-radius: 12px;
-  background: rgba(17,24,39,0.04);
+  background: rgba(17, 24, 39, 0.04);
   cursor: pointer;
 }
 
-/* Estado abierto (lo controlamos con data-menuOpen en body) */
-:global(body[data-menu-open="true"]) .backdrop{
+/* BOTÓN CV dentro del menú */
+.mobileMenu :global(button) {
+  margin-top: auto;
+  width: 100%;
+}
+
+.cvWrapper{
+  display: block;
+}
+
+/* ===== ESTADO ABIERTO ===== */
+:global(body[data-menu-open="true"]) .backdrop {
   opacity: 1;
   pointer-events: auto;
 }
 
-:global(body[data-menu-open="true"]) .mobileMenu{
+:global(body[data-menu-open="true"]) .mobileMenu {
   transform: translateX(0);
 }
 
-/* Animación del ícono hamburguesa cuando abre */
-:global(body[data-menu-open="true"]) .burger span:nth-child(1){
+/* ===== ANIMACIÓN BURGER ===== */
+:global(body[data-menu-open="true"]) .burger span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
-:global(body[data-menu-open="true"]) .burger span:nth-child(2){
+
+:global(body[data-menu-open="true"]) .burger span:nth-child(2) {
   opacity: 0;
 }
-:global(body[data-menu-open="true"]) .burger span:nth-child(3){
+
+:global(body[data-menu-open="true"]) .burger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Estado abierto (lo controlamos con data-menuOpen en body) */
+:global(body[data-menu-open="true"]) .backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animación del ícono hamburguesa cuando abre */
+:global(body[data-menu-open="true"]) .burger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+:global(body[data-menu-open="true"]) .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+:global(body[data-menu-open="true"]) .burger span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Breakpoint: ocultar nav + botón, mostrar burger */
-@media (max-width: 900px){
-  .navegation{ display: none; }
-  .boton{ display: none; }
-  .burger{ display: inline-flex; }
+@media (max-width: 900px) {
+  .navigation {
+    display: none;
+  }
+
+  .cvWrapper{
+    display: none;
+  }
+
+  .burger {
+    display: inline-flex;
+  }
 }
