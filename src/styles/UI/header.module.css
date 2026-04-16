@@ -213,4 +213,9 @@
   .burger {
     display: inline-flex;
   }
+  
+  .encabezado{
+    width: 105%;
+  }
+
 }
