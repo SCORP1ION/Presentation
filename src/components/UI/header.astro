@@ -7,7 +7,7 @@ import BottomText from "./BottomText.astro";
     <div class={styles.left}>
         <h1>RIGR</h1>
     </div>
- 
+
     <div class={styles.navigationContainer}>
         <nav class={styles.navigation}>
             <a href="#about">ABOUT</a>
@@ -19,32 +19,44 @@ import BottomText from "./BottomText.astro";
     </div>
 
     <div class={styles.right}>
-        <div class={styles.cvWrapper}><BottomText text="Download CV"/></div>
-        
+        <div class={styles.cvWrapper}><BottomText text="Download CV" /></div>
+
         <button
             class={styles.burger}
             aria-label="Open menu"
             aria-controls="mobile-menu"
             aria-expanded="false"
             data-burger
-        >☰
+            >☰
         </button>
     </div>
 
     <div class={styles.backdrop} data-backdrop></div>
 
-    <aside class={styles.mobileMenu} data-menu id="mobile-menu" aria-hidden="true">
+    <aside
+        class={styles.mobileMenu}
+        data-menu
+        id="mobile-menu"
+        aria-hidden="true"
+    >
         <div class={styles.mobileHeader}>
             <p class={styles.mobileTitle}>Menu</p>
-            <button class={styles.close} type="button" aria-label="Cerrar menu" data-close>X</button>
+            <div class={styles.menuClose}>
+                <button
+                    class={styles.close}
+                    type="button"
+                    aria-label="Cerrar menu"
+                    data-close>X</button
+                >
+            </div>
         </div>
 
         <div class={styles.mobileNav} aria-label="Navegacion movil">
-            <a data-link>ABOUT</a>
-            <a data-link>PROJECTS</a>
-            <a data-link>SKILL</a>
-            <a data-link>EXPERIENCE</a>
-            <a data-link>CONTACT</a>
+            <a data-link href="#about">ABOUT</a>
+            <a data-link href="#projects">PROJECTS</a>
+            <a data-link href="#skill">SKILL</a>
+            <a data-link href="#experience">EXPERIENCE</a>
+            <a data-link href="#contact">CONTACT</a>
         </div>
         <BottomText text="Download CV" />
     </aside>
@@ -65,8 +77,8 @@ import BottomText from "./BottomText.astro";
 
     const closeMenu = () => {
         document.body.dataset.menuOpen = "false";
-        burger?.setAttribute("aria-expanded", "false")
-        menu?.setAttribute("aria-hidden", "true")
+        burger?.setAttribute("aria-expanded", "false");
+        menu?.setAttribute("aria-hidden", "true");
     };
 
     burger?.addEventListener("click", () => {
@@ -77,7 +89,7 @@ import BottomText from "./BottomText.astro";
     closeBtn?.addEventListener("click", closeMenu);
     backdrop?.addEventListener("click", closeMenu);
 
-    links.forEach((link) => link.addEventListener("click", closeMenu)); 
+    links.forEach((link) => link.addEventListener("click", closeMenu));
 
     document.body.dataset.menuOpen = "false";
 </script>
