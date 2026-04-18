@@ -1,0 +1,22 @@
+.cardContainer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--black-light);
+    border-radius: 12px;
+}
+
+.title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--neutral-light);
+}
+
+.description{
+    color: var(--color-text);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}

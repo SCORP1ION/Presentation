@@ -1,5 +1,6 @@
 ---
 import styles from "../styles/hero/About.module.css"
+import CardAbout from "../components/cards/CardAbout.astro";
 ---
 
 <section class={styles.container}>
@@ -10,6 +11,10 @@ import styles from "../styles/hero/About.module.css"
     <div class={styles.divCard}>
         <span>Core Focus</span>
         <p class={styles.parrafo}>Specializing in Advanced Frontend Architecture and Web Security Systems.</p>
+    </div>
+
+    <div class={styles.cardsAbout}>
+        <CardAbout/>
     </div>
 
 </section>
