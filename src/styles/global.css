@@ -22,12 +22,10 @@ body {
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
-
-  h3 {
-    color: var(--neutral-light);
-    text-align: center;
-    padding-top: 20px;
-  }
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 footer{
