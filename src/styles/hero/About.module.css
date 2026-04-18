@@ -1,0 +1,40 @@
+.container {
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.container h1{
+    color: var(--neutral-light);
+}
+
+.line{
+    margin-top: .5rem;
+    padding: .2rem 1.5rem;
+    width: 5%;
+    background: var(--line);
+}
+
+.description{
+    margin-top: 1rem;
+    color: var(--typography-muted);
+    max-width: 70ch;
+    font-size: 1.2rem;
+}
+
+.divCard{
+    margin-top: 1rem;
+    border: 1px solid white;
+    background: var(--black-light);
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.divCard span{
+    color: var(--strongColor);
+}
+
+.divCard .parrafo{
+    padding-top: .5rem;
+    color: var(--text-white-light);
+}

@@ -22,10 +22,22 @@
   box-shadow: 0 0 80px 1px rgba(255, 255, 255, 0.5);
 }
 
+.strong{
+  color: var(--strongColor);
+}
+
 .textBig{
   color: white;
   font-size: 6rem;
   max-width: 20ch;
+}
+
+.ctas{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .presentacion {

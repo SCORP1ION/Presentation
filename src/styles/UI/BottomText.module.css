@@ -13,5 +13,5 @@
 }
 
 .texto:hover{
-    color: var(--neutral-light);
+    color: var(--primary-accent);
 }

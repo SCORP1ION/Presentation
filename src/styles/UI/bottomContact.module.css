@@ -1,7 +1,8 @@
 .button {
   text-decoration: none;
-  background: var(--typography-muted);
+  background: var(--black-light);
   padding: 1rem;
   border-radius: 5px;
+  color: var(--strongColor);
 }
  

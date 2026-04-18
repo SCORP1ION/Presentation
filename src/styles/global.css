@@ -5,7 +5,11 @@
   --typography-main: #111827;
   --color-text: #a9acb3;
   --typography-muted: #6B7280;
-  --bottomColor: #4369FF
+  --bottomColor: #4369FF;
+  --strongColor: #4CD6FF;
+  --black-light: #1C1B1C;
+  --line: #00677F;
+  --text-white-light: #B8C3FF;
 }
 
 * {

@@ -1,16 +1,24 @@
 ---
 import style from "../styles/hero/sobreMi.module.css";
+import BottomText from "../components/UI/BottomText.astro"
+import ArrowRight from "../components/icons/ArrowRight.astro";
+import BottomContact from "../components/UI/BottomContact.astro";
 ---
 
 <section class={style.hero}>
   <div class={style.left}>
     <h2 class={style.textBig}>
-      I build <strong>impactful</strong> digital solutions.
+      I build <strong class={style.strong}>impactful</strong> digital solutions.
     </h2>
 
     <p class={style.presentacion}>
-      Full-stack Software Enginner dedicated to crafting high-permformance, secure, and visually stuning web applications that solve real-world problems.
+      Full-stack Software Engineer dedicated to crafting high-performance, secure, and visually stunning web applications that solve real-world problems.
     </p>
+
+    <div class={style.ctas}>
+      <BottomText text="View Projects"/>
+      <BottomContact/>
+    </div>
   </div>
 
   <div class={style.right}>
