@@ -1,3 +1,13 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 0 auto;
+    padding: 0 2rem;
+}
+
 .container {
     padding: 1rem;
     justify-content: space-between;
@@ -36,4 +46,11 @@
 .divCard .parrafo{
     padding-top: .5rem;
     color: var(--text-white-light);
+}
+
+@media (max-width: 768px) {
+    .wrapper{
+        flex-direction: column;
+        padding: 0 1rem;
+    }
 }
