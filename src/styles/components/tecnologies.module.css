@@ -1,6 +1,7 @@
 .skill h3 {
   padding: 2rem;
-  
+  color: var(--color-text);
+  text-align: center;
 }
 .lenguajes a {
   color: var(--color-text);
@@ -21,7 +22,6 @@
   grid-template-rows: repeat(3, 50px);
   text-align: center;
   align-items: center;
-  cursor: pointer;
   gap: 0px;
 }
 

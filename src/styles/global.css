@@ -12,11 +12,6 @@
   --text-white-light: #B8C3FF;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: var(--neutro-dark);
   overflow-x: hidden;

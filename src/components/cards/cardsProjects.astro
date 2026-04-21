@@ -1,5 +1,5 @@
 ---
-import style from "../../styles/components/projects.module.css";
+import style from "../../styles/components/cardprojects.module.css";
 
 const projects = [
   {
@@ -23,27 +23,30 @@ const projects = [
     description: "Pagina web de cotizaciones de palomitas y otros productos por mayoreo con numero",
     technologies: ["Astro", "HTML", "CSS"],
     code: "https://github.com/SCORP1ION/LandingPageLaPaloma.git"
-  }
+  },
+  
 ];
 ---
 
 <section class={style.projectGrid}>
   {
     projects.map((project) => (
-      <article class={style.articleProyect}>
-        <img src={project.image} />
-        <p class={style.titulo}>{project.title}</p>
-        <p class={style.descriptionProjecto}>{project.description}</p>
+      <article class={style.card}>
+        <img src={project.image} alt={project.title} />
 
-        <div class={style.tech}>
-          {project.technologies.map((tech) => (
-            <span>{tech}</span>
-          ))}
-        </div>
-        <div class={style.codigo}>
+        <div class={style.content}>
+          <h3 class={style.titulo}>{project.title}</h3>
+          <p class={style.description}>{project.description}</p>
+
+          <div class={style.tech}>
+            {project.technologies.map((tech) => (
+              <span>{tech}</span>
+            ))}
+          </div>
+
           <a
             href={project.code}
-            class={style.verCodigo}
+            class={style.button}
             target="_blank"
             rel="noopener noreferrer"
           >
