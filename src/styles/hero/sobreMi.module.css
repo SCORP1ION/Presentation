@@ -47,6 +47,7 @@
   max-width: 40ch;
   box-sizing: border-box;
   text-align: left;
+  margin: 1.75rem 0 1.75rem 0; /*Arriba Derecha Abajo Izquierda*/
 }
 
 @media(max-width: 768px){
