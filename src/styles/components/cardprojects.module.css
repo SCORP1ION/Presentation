@@ -1,5 +1,5 @@
 .projectGrid{
-  margin: 1rem 2rem;
+  margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
@@ -89,10 +89,24 @@
   background: var(--bottomColor);
 }
 
-@media (max-width: 768px){
-  .projectGrid{
+@media (max-width: 1024px) {
+  .projectGrid {
     width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectGrid {
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-items: stretch;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
   }
 }

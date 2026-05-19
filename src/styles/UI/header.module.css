@@ -4,6 +4,9 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 0.75rem 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ===== LEFT ===== */
@@ -219,9 +222,10 @@
   .burger {
     display: inline-flex;
   }
-  
-  .encabezado{
-    width: 105%;
-  }
 
+  .encabezado {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }

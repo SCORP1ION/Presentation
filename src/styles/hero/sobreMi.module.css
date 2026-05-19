@@ -5,6 +5,9 @@
   min-height: 10vh;
   gap: 2rem;
   padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .left{
@@ -28,7 +31,7 @@
 
 .textBig{
   color: white;
-  font-size: 6rem;
+  font-size: clamp(2.5rem, 8vw, 6rem);
   max-width: 20ch;
 }
 
@@ -50,27 +53,51 @@
   margin: 1.75rem 0 1.75rem 0; /*Arriba Derecha Abajo Izquierda*/
 }
 
-@media(max-width: 768px){
-  .hero{
+@media (max-width: 1024px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .left {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
   }
 
-  .right{
+  .right {
     order: -1;
+    width: 100%;
+    max-width: 100%;
   }
-  .presentacion{
-    max-width: 50ch;
+
+  .presentacion {
+    max-width: 100%;
     padding: 0;
     margin: 0 auto;
     text-align: left;
+    font-size: 1.125rem;
   }
 
   .mePhoto {
     margin: 0 auto 2rem auto;
     display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .ctas {
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 

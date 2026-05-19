@@ -4,8 +4,9 @@
     justify-content: space-between;
     gap: 2rem;
     max-width: 1200px;
-    width: 0 auto;
+    width: 100%;
     padding: 0 2rem;
+    box-sizing: border-box;
     margin: 1.75rem 0 0 0;
 }
 
@@ -50,9 +51,22 @@
     color: var(--text-white-light);
 }
 
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .wrapper{
+    .wrapper {
         flex-direction: column;
-        padding: 0 2rem;
+        padding: 0 1rem;
+    }
+
+    .divCard {
+        max-width: 100%;
+        width: 100%;
     }
 }
