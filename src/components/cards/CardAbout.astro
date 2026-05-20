@@ -6,41 +6,44 @@ import Shield from "../icons/Shield.astro";
 import Graphics from "../icons/Graphics.astro";
 
 const cards = [
-    {
-        icon: Cli,
-        title: "Clean Code",
-        description: "Writing maintainable, enterprise-grade codebases.",
-    },
-    {
-        icon: Speed,
-        title: "Performance",
-        description:
-            "Optiomizing for sub-second load times and silky smooth UX.",
-    },
-    {
-        icon: Shield,
-        title: "Secure Systems",
-        description: "Prioritizing data integrity and security-first desing"
-    },
-    {
-        icon: Graphics,
-        title: "Scalability",
-        description: "Building infrastructure that grows with your business."
-    }
+  {
+    icon: Cli,
+    title: "Clean Code",
+    description: "Writing maintainable, enterprise-grade codebases.",
+  },
+  {
+    icon: Speed,
+    title: "Performance",
+    description: "Optiomizing for sub-second load times and silky smooth UX.",
+  },
+  {
+    icon: Shield,
+    title: "Secure Systems",
+    description: "Prioritizing data integrity and security-first desing",
+  },
+  {
+    icon: Graphics,
+    title: "Scalability",
+    description: "Building infrastructure that grows with your business.",
+  },
 ];
 ---
 
 <div class={styles.container}>
-    {
-        cards.map((card) => {
-            const Icon = card.icon;
-            return (
-                <div class={styles.cardContainer}>
-                    <Icon />
-                    <p class={styles.title}>{card.title}</p>
-                    <p class={styles.description}>{card.description}</p>
-                </div>
-            );
-        })
-    }
+  {
+    cards.map((card) => {
+      const Icon = card.icon;
+      return (
+        <div class={styles.cardContainer}>
+          <div class={styles.icon}>
+            <Icon />
+          </div>
+
+          <h3 class={styles.title}>{card.title}</h3>
+
+          <p class={styles.description}>{card.description}</p>
+        </div>
+      );
+    })
+  }
 </div>
