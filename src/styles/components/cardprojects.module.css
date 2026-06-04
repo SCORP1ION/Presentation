@@ -1,3 +1,9 @@
+.title{
+  color: var(--neutral-light);
+  font-weight: 900;
+  text-align: center;
+}
+
 .projectGrid{
   margin: 1rem auto;
   display: grid;
@@ -96,6 +102,10 @@
     margin: 1rem 0;
     padding: 0 1rem;
     box-sizing: border-box;
+  }
+
+  .title{
+    padding: 2.5rem;
   }
 }
 
