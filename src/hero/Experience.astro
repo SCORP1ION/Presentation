@@ -1,0 +1,36 @@
+---
+import styles from "../styles/hero/Experience.module.css";
+
+const jobs = [
+    {
+        Year: "2023 - Present",
+        N_Company: "Laptops Master",
+        Description:
+            "Diagnóstico, mantenimiento y reparación de equipos de cómputo, incluyendo laptops y PCs de escritorio. Atención a problemas de hardware, optimización de rendimiento e instalación de software.",
+        Post: "Técnico de Soporte y Reparación",
+    },
+    
+];
+---
+
+<section>
+    <h1 class={styles.experience}>Experience</h1>
+    <section class={styles.sectionContainer}>
+        {
+            jobs.map((job) => {
+                return (
+                    <div class={styles.containerPrimary}>
+                        <p class={styles.years}>{job.Year}</p>
+                        <div class={styles.containerSecondary}>
+                            <p class={styles.company}>
+                                {job.Post} @ {job.N_Company}
+                            </p>
+                            <p class={styles.description}>{job.Description}</p>
+                        </div>
+                    </div>
+                <div class={styles.separator}></div>
+                );
+            })
+        }
+    </section>
+</section>
