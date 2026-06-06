@@ -1,0 +1,79 @@
+.title{
+    color: var(--neutral-light);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 800;
+    max-width: 10ch;
+}
+.strong{
+    color: var(--strongColor);
+}
+
+.emailPersonal{
+    color: var(--neutral-light);
+    margin-top: 2rem;
+    display: inline-block;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.emailPersonal:hover{
+    color: var(--strongColor);
+}
+
+.littleDescription{
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    max-width: 55ch;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.formtexts{
+    color: var(--text-white-light);
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.divContainer{
+    max-width: 100%;
+}
+
+.inputs{
+    background: var(--neutro-dark);
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: .3s;
+}
+
+.inputs:focus{
+    outline: none;
+    border-color: var(--strongColor);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, .15);
+}
+
+.sectionContainer{
+    display: grid;
+    grid-template-columns: minmax(300px, 500px) minmax(350px, 600px);
+    justify-content: center;
+    gap: clamp(2rem, 6vw, 6rem);
+    padding: clamp(2rem, 5vw, 4rem);
+}
+
+.formContainer{
+    background: var(--background-sections);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+}
+
+textarea.inputs{
+    resize: vertical;
+    min-height: 140px;
+}

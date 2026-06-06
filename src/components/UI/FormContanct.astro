@@ -1,0 +1,42 @@
+---
+import styles from "../../styles/UI/FormContact.module.css";
+import BottomText from "./BottomText.astro";
+---
+
+<section class={styles.sectionContainer} id="contact">
+    <div class={styles.divContainer}>
+        <h1 class={styles.title}>
+            LET'S BUILD <strong class={styles.strong}>SOMETHING GREAT</strong>
+        </h1>
+        <p class={styles.littleDescription}>
+            Currenly open to freelance opportunities and junior engineering
+            roles. Whether you have a question or just want to say hi, my inbox
+            is always open
+        </p>
+        <p class={styles.emailPersonal}>scorpionip01010@gmail.com</p>
+    </div>
+
+    <form class={styles.formContainer}>
+        <label for="text" class={styles.formtexts}>Name</label>
+        <input type="text" placeholder="John Doe" class={styles.inputs} />
+
+        <label for="email" class={styles.formtexts}>Email</label>
+        <input
+            type="email"
+            placeholder="john@example.com"
+            class={styles.inputs}
+        />
+
+        <div>
+            <label for="text" class={styles.formtexts}>Message</label>
+            <textarea
+                class={styles.inputs}
+                name="comment"
+                id=""
+                rows="4"
+                cols="50"
+                placeholder="Tell me about your project..."></textarea>
+        </div>
+        <BottomText text="Send Inquiry"/>
+    </form>
+</section>
