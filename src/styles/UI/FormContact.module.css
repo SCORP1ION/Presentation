@@ -92,18 +92,13 @@ textarea.inputs{
 button {
     width: 100%;
     padding: 1rem;
-  
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-  
     background: #111827;
     color: #fff;
-  
     font-size: 1rem;
     font-weight: 600;
-  
     cursor: pointer;
-  
     transition: all 0.3s ease;
   }
   
