@@ -17,6 +17,15 @@
     transition: .3s;
 }
 
+.mensaje {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+  }
+
 .emailPersonal:hover{
     color: var(--strongColor);
 }
@@ -46,6 +55,7 @@
     border-radius: 12px;
     padding: 1rem;
     transition: .3s;
+    color: var(--color-text);
 }
 
 .inputs:focus{
@@ -77,3 +87,25 @@ textarea.inputs{
     resize: vertical;
     min-height: 140px;
 }
+
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #111827;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #1f2937;
+    border-color: #3b82f6;
+  
+    box-shadow:
+      0 0 20px rgba(59, 130, 246, 0.25);
+  }
