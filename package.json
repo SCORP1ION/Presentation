@@ -10,7 +10,10 @@
     "server": "node --env-file=.env src/components/script/express.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@astrojs/vercel": "^10.0.8",
+=======
+>>>>>>> 5c7ad29a63dde0b40a263bbbd97f0b7cc385fcdf
     "astro": "^6.4.5",
     "express": "^5.2.1",
     "resend": "^6.12.4"
