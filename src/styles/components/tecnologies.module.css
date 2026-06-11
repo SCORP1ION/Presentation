@@ -1,6 +1,6 @@
-.skill h3 {
+.skill h1 {
   padding: 2rem;
-  color: var(--color-text);
+  color: var(--neutral-light);
   text-align: center;
 }
 .lenguajes a {
