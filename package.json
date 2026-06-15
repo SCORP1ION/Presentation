@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/vercel": "^10.0.8",
     "astro": "^6.4.5",
+    "astro-icon": "^1.1.5",
     "express": "^5.2.1",
     "resend": "^6.12.4"
   }
