@@ -1,23 +1,52 @@
 ---
 import style from "../../styles/components/tecnologies.module.css";
 
-const skill = [
-  "JavaScript",
-  "C++",
-  "Astro",
-  "HTML5",
-  "Flutter",
-  "React Navite",
-  "React",
-  "CSS",
+const svgs = [
+  {
+    ruta: "/icons/astro.svg",
+    alt: "Astro",
+  },
+  {
+    ruta: "/icons/cplusplus.svg",
+    alt: "C++",
+  },
+  {
+    ruta: "/icons/css.svg",
+    alt: "CSS",
+  },
+  {
+    ruta: "/icons/expo.svg",
+    alt: "Expo",
+  },
+  {
+    ruta: "/icons/flutter.svg",
+    alt: "Flutter",
+  },
+  {
+    ruta: "/icons/html5.svg",
+    alt: "HTML",
+  },
+  {
+    ruta: "/icons/javascript.svg",
+    alt: "JavaScript",
+  },
 ];
 ---
- 
-<section id="skill">
+
+<section id="skill" class={style.sectionContainer}>
   <div class={style.skill}>
     <h1>SKILLS</h1>
   </div>
-  <div class={style.lenguajes}>
-    {skill.map((skills) => <a>{skills}</a>)}
+  <div class={style.skillGrid}>
+    {
+      svgs.map((skill) => {
+        return (
+          <div class={style.card}>
+            <img src={skill.ruta} alt={skill.alt} class={style.icon} />
+            <span>{skill.alt}</span>
+          </div>
+        );
+      })
+    }
   </div>
 </section>
