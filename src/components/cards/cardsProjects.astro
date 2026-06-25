@@ -9,31 +9,37 @@ const projects = [
       "Aplicacion movil de asginaciona de servicios sobre problemas de equipos para empresas o negocios, apartado de venta de equipos de computo y ubicacion de local con google maps",
     technologies: ["React native", "Firebase", "JavaScript", "Expo GO"],
     code: "https://github.com/SCORP1ION/Laptop-Master-Service.git",
+
   },
+  
   {
     image: "/img/PageDeepTeal.png",
     title: "Deep Teal",
-    description: "Landing page creada para practica una landing page económica, rápida de implementar y enfocada en generación de leads / contacto, con una sola acción principal.",
+    description:
+      "Landing page creada para practica una landing page económica, rápida de implementar y enfocada en generación de leads / contacto, con una sola acción principal.",
     technologies: ["Astro", "HTML", "CSS", "Git", "GitHub"],
-    code: "https://github.com/SCORP1ION/landing-DeepTealSolutions.git"
+    code: "https://github.com/SCORP1ION/landing-DeepTealSolutions.git",
+    page: "https://deep-teal-solutions.vercel.app/",
   },
   {
     image: "/img/laPaloma.png",
     title: "La Paloma",
-    description: "La landing page está enfocada en la venta de productos para eventos, incluyendo palomitas, galletas de horno, duritos y diferentes botanas, permitiendo a los clientes solicitar información y cotizaciones de manera rápida y sencilla.",
+    description:
+      "La landing page está enfocada en la venta de productos para eventos, incluyendo palomitas, galletas de horno, duritos y diferentes botanas, permitiendo a los clientes solicitar información y cotizaciones de manera rápida y sencilla.",
     technologies: ["Astro", "HTML", "CSS", "Git", "GitHub"],
-    code: "https://github.com/SCORP1ION/LandingPageLaPaloma.git"
+    code: "https://github.com/SCORP1ION/LandingPageLaPaloma.git",
+    page: "https://landing-page-la-paloma.vercel.app/",
   },
 
   {
     image: "/img/SushiPage.png",
     title: "Shitateya page",
-    description: "Landing page moderna para un restaurante de sushi de alta gama, desarrollada con Next.js y CSS Modules. El proyecto presenta una experiencia visual elegante con diseño responsive, navegación fluida entre secciones, menú dinámico por categorías y una interfaz enfocada en resaltar la identidad y exclusividad de la marca.",
+    description:
+      "Landing page moderna para un restaurante de sushi de alta gama, desarrollada con Next.js y CSS Modules. El proyecto presenta una experiencia visual elegante con diseño responsive, navegación fluida entre secciones, menú dinámico por categorías y una interfaz enfocada en resaltar la identidad y exclusividad de la marca.",
     technologies: ["NextJS", "TypeScript", "CSS module", "Git", "GitHub"],
-    code: "https://github.com/SCORP1ION/SushiPage"
+    code: "https://github.com/SCORP1ION/SushiPage",
+    page: "https://shitateya-page.vercel.app/",
   },
-  
-  
 ];
 ---
 
@@ -64,6 +70,15 @@ const projects = [
             rel="noopener noreferrer"
           >
             View code
+          </a>
+          <a
+            href={project.page}
+            class={style.page}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>View Live Site</span>
+            <span>↗</span>
           </a>
         </div>
       </article>
