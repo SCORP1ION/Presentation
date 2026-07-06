@@ -30,7 +30,13 @@ html {
 }
 
 body {
-  background: var(--neutro-dark);
+  background: 
+    linear-gradient(
+      rgba(5, 10, 20, .85),
+      rgba(5, 10, 20, .92)
+    ),
+    url('/img/imgBackground.jpeg')
+  ;
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
