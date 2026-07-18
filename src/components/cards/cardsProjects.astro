@@ -35,7 +35,7 @@ const projects = [
     image: "/img/SushiPage.png",
     title: "Shitateya page",
     description:
-      "Landing page moderna para un restaurante de sushi de alta gama, desarrollada con Next.js y CSS Modules. El proyecto presenta una experiencia visual elegante con diseño responsive, navegación fluida entre secciones, menú dinámico por categorías y una interfaz enfocada en resaltar la identidad y exclusividad de la marca.",
+      "Landing page moderna para un restaurante de sushi de alta gama, desarrollada con Next.js y CSS Modules. ",
     technologies: ["NextJS", "TypeScript", "CSS module", "Git", "GitHub"],
     code: "https://github.com/SCORP1ION/SushiPage",
     page: "https://shitateya-page.vercel.app/",
@@ -51,8 +51,9 @@ const projects = [
   {
     projects.map((project) => (
       <article class={style.card}>
+      <div class={style.cardImage}>
         <img src={project.image} alt={project.title} />
-
+      </div>
         <div class={style.content}>
           <h3 class={style.titulo}>{project.title}</h3>
           <p class={style.description}>{project.description}</p>
