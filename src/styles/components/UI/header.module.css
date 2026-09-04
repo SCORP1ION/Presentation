@@ -79,6 +79,33 @@
   gap: 5px;
 }
 
+.downloadCV{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  padding: 0.85rem 1.2rem;
+  background: var(--primary-accent);
+  color: var(--neutral-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-weight: 700;
+  transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.downloadCV:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+.downloadCV:active{
+  transform: translateY(0);
+}
+
 @media (max-width: 900px) {
   .burger {
     display: flex;
