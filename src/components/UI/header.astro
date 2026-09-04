@@ -19,8 +19,12 @@ import BottomText from "./BottomText.astro";
     </div>
 
     <div class={styles.right}>
-        <div class={styles.cvWrapper}><BottomText text="Download CV" /></div>
-
+        <div class={styles.cvWrapper}><a href="/public/documents/CVRicardoGarcia.pdf" download
+        class={styles.downloadCV}
+            >
+        <span>Download CV</span>
+    </a>
+    </div>
         <button
             class={styles.burger}
             aria-label="Open menu"
@@ -58,7 +62,11 @@ import BottomText from "./BottomText.astro";
             <a data-link href="#experience">EXPERIENCE</a>
             <a data-link href="#contact">CONTACT</a>
         </div>
-        <BottomText text="Download CV" />
+        <a href="/public/documents/CVRicardoGarcia.pdf" download
+        class={styles.downloadCV}
+            >
+        <span>Download CV</span>
+    </a>
     </aside>
 </header>
 
