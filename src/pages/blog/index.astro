@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../../layout/Layout.astro';
+import BlogCard from '../../components/cards/BlogCard.astro';
+
+const posts = await getCollection('blog');
+
+posts.sort(
+    (a, b) =>
+        b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Layout
+    title="Blog | Ricardo García"
+    description="Writeups y laboratorios de ciberseguridad."
+>
+
+    <main class="blogPage">
+        
+        <header class="blogIntro">
+            <div>
+                <a class="back" href="/" > Volver al inicio</a>
+            </div>
+            <span class="eyebrow">
+                CYBERSECURITY LAB
+            </span>
+
+            <h1>
+                Blog
+            </h1>
+
+            <p>
+                Writeups, laboratorios y documentación de
+                máquinas vulnerables realizadas durante mi
+                aprendizaje en ciberseguridad.
+            </p>
+
+        </header>
+
+        <section class="blogGrid">
+
+            {posts.map((post) => (
+                <BlogCard
+                    title={post.data.title}
+                    description={post.data.description}
+                    date={post.data.date}
+                    difficulty={post.data.difficulty}
+                    platform={post.data.platform}
+                    tags={post.data.tags}
+                    slug={post.id}
+                />
+            ))}
+
+        </section>
+
+    </main>
+
+</Layout>
+
+<style>
+    .blogPage {
+        width: min(1200px, 90%);
+        margin: 0 auto;
+        padding: 8rem 0 5rem;
+        color: var(--neutral-light);
+    }
+
+    .back{
+        text-decoration: none;
+        color: var(--primary-accent);
+        font-weight: 600;
+    }
+    .blogIntro {
+        max-width: 750px;
+        margin-bottom: 4rem;
+    }
+
+    .eyebrow {
+        color: var(--primary-accent);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+    }
+
+    .blogIntro h1 {
+        margin: 0.5rem 0 1rem;
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+
+    .blogIntro p {
+        max-width: 650px;
+        line-height: 1.7;
+        font-size: 1.1rem;
+        color: var(--color-text);
+    }
+
+    .blogGrid {
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(300px, 1fr));
+
+        gap: 1.5rem;
+    }
+</style>
