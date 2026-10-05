@@ -1,0 +1,125 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    date: Date;
+    difficulty: string;
+    platform: string;
+    tags: string[];
+    slug: string;
+}
+
+const {
+    title,
+    description,
+    date,
+    difficulty,
+    platform,
+    tags,
+    slug
+} = Astro.props;
+
+const formattedDate = date.toLocaleDateString('es-MX', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+});
+---
+
+<a class="card" href={`/blog/${slug}`}>
+    <span class="platform">{platform}</span>
+
+    <h2>{title}</h2>
+
+    <p>{description}</p>
+
+    <div class="meta">
+        <span>{difficulty}</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+    </div>
+
+    <div class="tags">
+        {tags.slice(0, 4).map((tag) => (
+            <span>#{tag}</span>
+        ))}
+    </div>
+</a>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        padding: 1.5rem;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.03);
+
+        color: var(--neutral-light);
+        text-decoration: none;
+
+        transition:
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            background 0.2s ease;
+    }
+
+    .card:hover {
+        border-color: color-mix(in srgb, var(--primary-accent) 50%, transparent);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-2px);
+    }
+
+    .platform {
+        color: var(--primary-accent);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    .card h2 {
+        margin: 0;
+        font-size: 1.4rem;
+        line-height: 1.25;
+    }
+
+    .card p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--color-text);
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+
+        margin-top: auto;
+        padding-top: 0.5rem;
+
+        font-size: 0.8rem;
+        color: var(--color-text);
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .tags span {
+        padding: 0.25rem 0.5rem;
+
+        border-radius: 6px;
+
+        background: rgba(255, 255, 255, 0.06);
+
+        font-size: 0.7rem;
+        color: var(--text-white-light);
+    }
+</style>
