@@ -21,7 +21,6 @@ author: "Ricardo Ivan Garcia Ramos"
 > **Plataforma:** DockerLabs  
 > **Dificultad:** Muy fácil  
 > **Sistema operativo:** Linux  
-> **Autor:** Ricardo Ivan Garcia Ramos
 
 ---
 
@@ -56,8 +55,6 @@ Credenciales de root
         ↓
       ROOT
 ```
-
-![Evidencia de la cadena de explotación](./breakmyssh/breakmyssh-01.png)
 
 ---
 
@@ -97,7 +94,7 @@ La versión identificada fue:
 OpenSSH 7.7
 ```
 
-![Evidencia del escaneo de Nmap](./breakmyssh/breakmyssh-02.png)
+![Evidencia de la cadena de explotación](./breakmyssh/breakmyssh-01.png)
 
 ---
 
@@ -146,7 +143,7 @@ RHOST
 USER_FILE
 ```
 
-![Configuración inicial del módulo de Metasploit](./breakmyssh/breakmyssh-03.png)
+![Configuración inicial del módulo de Metasploit](./breakmyssh/breakmyssh-02.png)
 
 ---
 
@@ -166,7 +163,7 @@ set USER_FILE /usr/share/wordlists/seclists/Usernames/xato-net-10-million-userna
 
 El objetivo del diccionario era proporcionar a Metasploit una lista de nombres que pudiera comprobar contra el servicio SSH.
 
-![Configuración del RHOST y USER_FILE](./breakmyssh/breakmyssh-04.png)
+![Configuración del RHOST y USER_FILE](./breakmyssh/breakmyssh-03.png)
 
 ---
 
@@ -194,6 +191,8 @@ root
 
 En ese momento se detuvo la enumeración porque ya se había identificado una cuenta con privilegios administrativos.
 
+![Usuario root encontrado](./breakmyssh/breakmyssh-04.png)
+
 ### Resultado
 
 **Usuario identificado:**
@@ -211,6 +210,8 @@ Para ello se utilizó **Hydra** junto con el diccionario `rockyou.txt`.
 
 La idea de esta etapa fue probar diferentes contraseñas contra el servicio SSH utilizando el usuario previamente identificado.
 
+![Ataque de diccionario con Hydra](./breakmyssh/breakmyssh-06.png)
+
 ### Cadena de ataque
 
 ```text
@@ -227,7 +228,7 @@ Contraseña válida
 
 Durante esta etapa se consiguió recuperar una contraseña válida para la cuenta `root`.
 
-![Ataque de diccionario con Hydra](./breakmyssh/breakmyssh-06.png)
+![Ataque de diccionario con Hydra](./breakmyssh/breakmyssh-07.png)
 
 ---
 
@@ -245,7 +246,7 @@ root
 
 Por lo tanto, se consiguió el objetivo de la máquina.
 
-![Acceso exitoso mediante SSH](./breakmyssh/breakmyssh-07.png)
+![Acceso exitoso mediante SSH](./breakmyssh/breakmyssh-08.png)
 
 ---
 
@@ -286,9 +287,6 @@ SSH
   ▼
 ROOT
 ```
-
-![Cadena completa de explotación](./breakmyssh/breakmyssh-08.png)
-
 ---
 
 # 9. Herramientas utilizadas
@@ -436,21 +434,7 @@ La información obtenida en una etapa puede utilizarse para facilitar la siguien
 
 ---
 
-# 14. Referencias
-
-Las referencias concretas consultadas durante la práctica no se encuentran detalladas en el documento original.
-
-Como parte de futuras documentaciones, se recomienda registrar aquí las fuentes utilizadas para investigar:
-
-- Vulnerabilidades/CVE.
-- Documentación oficial.
-- Manuales de las herramientas.
-- Artículos técnicos.
-- Recursos de aprendizaje.
-
----
-
-# 15. Conclusión
+# 14. Conclusión
 
 La máquina **BreakMySSH** permite practicar una cadena de ataque centrada completamente en el servicio SSH.
 
